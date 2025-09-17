@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+     <head>
+          <title>PORTFOLIO</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0">
+          <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+          <style type="text/css">
+               *{padding: 0; margin: 0; box-sizing: border-box; font-family: "Poppins","sans-serif";}
+               body{
+                    height: 100vh;
+                    background-image: url(.vscode/background.jpg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    padding: 50px 5%;
+               }
+               .container{
+                    position: relative;
+                    height: 100%;
+                    background: rgba(255,255,255,.1);
+                    border: 12px solid rgba(255,255,255,.2);
+                    border-radius: 30px;
+                    backdrop-filter: blur(30px);
+                    transform: scale(0);
+                    animation: zoom-in 5s ease forwards;
+               }
+               @keyframes zoom-in{
+                    100%{transform: scale(1);}
+               }
+               header{
+                    position: absolute;
+                    top: 10;
+                    left:10;
+                    width: 100%;
+                    padding: 25px 5%;
+                    display: flex;
+                    justify-content:space-around;
+                    align-items: center;
+                    z-index: 100;
+               }
+               .animated{
+                    transform: translateY(30px);
+                    opacity: 0;
+                    animation: slide-in 5s ease forwards;
+                    animation-delay: 1s;
+               }
+               @keyframes slide-in{
+                    100%{transform: translateY(0);opacity: 1;}
+               }
+               .logo{
+                    font-size: 25px;
+                    font-weight: bold;
+                    color:#acea1b;
+                    text-decoration: dashed;
+               }
+               .navbar a{
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #c11111;
+                    text-decoration:wavy;
+                    margin-left: 35px;
+                    border-bottom: 2px solid transparent;
+                    transition: .5s;
+               }
+               .navbar a:hover,.navbar a.active{
+                    border-color: coral;
+               }
+               .home{
+                    display: flex;
+                    align-items: center;
+                    height: 80%;
+                    gap:100px;
+                    padding: 120px 5% 0;
+                    color:#12ad17;
+                    animation-delay: 1.5s;
+               }
+               .home-detail h1{
+                    font-size: 35px;
+                    line-height: 1;
+                    font-weight: bold;
+               }
+               .home-detail h2{
+                    font-size: 32px;
+                    font-style: italic;
+               }
+               .home-detail p{
+                    margin: 10px 0 20px;
+                    font-size: 20px;
+               }
+               .download-social{
+                    display: flex;
+                    align-items: center;
+               }
+               .btn{
+                    padding: 10px 30px;
+                    background: #ee9e27;
+                    border:5px solid #fff;
+                    border-radius: 20px;
+                    box-shadow: 0 0 10px;
+                    color: #fff;
+                    text-decoration: solid;
+                    font-size: 18px;
+                    font-weight: bold;
+                    transition: .5s;
+               }
+               .btn:hover{
+                    background: transparent;
+                    box-shadow:#22b797;
+                    color: blue;
+               }
+               .social-icons{
+                    margin-left: 20px;
+                    display: flex;
+                    align-items: center;
+               }
+               .social-icons a{
+                    display: flex;
+                    padding: 12px;
+                    border: 5px solid #fff;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    color: #22b797;
+                    text-decoration: double;
+                    margin: 0 8px;
+                    transition: .5s;
+               }
+               .social-icons a:hover{
+                    background:pink;
+                    box-shadow: 0 0 10px #9f1212;
+                    color: #1965bd;
+               }
+               .home-img .img-box{
+                    position: relative;
+                    width: 15vw;
+                    height: 15vw;
+                    border: 12px solid#fff;
+                    border-radius: 50%;
+                    box-shadow: 10 10 40px #331191;
+                    overflow:hidden;
+               }
+               .home-img .img-box img{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+               }
+          </style>
+      </head>
+     <body>
+          <div class="container">
+               <header class="animated">
+                    <a href="#" class="logo">Portfolio</a>
+                    <nav class="navbar">
+                         <a href="#">Home</a>
+                         <a href="#">About</a>
+                         <a href="#">Portfolio</a>
+                         <a href="#">Service</a>
+                         <a href="#">Contact</a>
+                    </nav>
+               </header>
+
+               <section class="home">
+                    <div class="home-detail">
+                         <h1>Emilian Leaman</h1>
+                         <h2> Frontend Devoloper</h2>
+                         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore minima sapiente placeat perspiciatis est libero, assumenda, officiis voluptate, quasi et fuga aliquam velit quaerat! Enim repellat voluptatibus aut natus in!</p>
+
+                         <div class="download-social">
+                              <a href="#" class="btn">Download CV</a>
+                              <div class="social-icons">
+                                   <a href="#"><i class="ri-github-fill"></i></a>
+                                   <a href="#"><i class="ri-linkedin-fill"></i></a>
+                                   <a href="#"><i class="ri-twitter-fill"></i></a>
+                                   <a href="#"><i class="ri-youtube-fill"></i></a>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="home-img">
+                         <div class="img-box">
+                              <img src="images.jpg" alt="profile pic">
+                         </div>
+                    </div>
+               </section>
+          </div>
+     </body>
+</html>
